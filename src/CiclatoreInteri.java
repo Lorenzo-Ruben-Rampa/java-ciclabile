@@ -27,4 +27,20 @@ public class CiclatoreInteri {
             return this.indiceAttuale < this.elencoInteri.length;
 
         }
+    
+    // BONUS
+    // Costruttore che non prevede parametri
+        public CiclatoreInteri () {
+            this.elencoInteri = new int[0];
+        }
+
+    // Metodo per aggiungere un elemento all'elenco
+        public void addElemento (int elementoDaAggiungere) {
+            int[] nuovoElenco = new int[elencoInteri.length + 1];
+            for (int i = 0; i < elencoInteri.length; i++) {
+                nuovoElenco[i] = this.elencoInteri[i];
+            }
+            nuovoElenco[this.elencoInteri.length] = elementoDaAggiungere;
+            this.elencoInteri = nuovoElenco;
+        }
 }
